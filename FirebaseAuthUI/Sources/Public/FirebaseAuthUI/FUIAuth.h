@@ -84,7 +84,7 @@ typedef void (^FUIAuthResultCallback)(FIRUser *_Nullable user, NSError *_Nullabl
  */
 - (void)authUI:(FUIAuth *)authUI
     didSignInWithAuthDataResult:(nullable FIRAuthDataResult *)authDataResult
-                          error:(nullable NSError *)error;
+                          error:(nullable NSError *)error NS_SWIFT_UNAVAILABLE("UNAVAILABLE") NS_SWIFT_NAME(_authUI(_:didSignInWithAuthDataResult:error:));
 
 /** @fn authUI:didSignInWithAuthDataResult:error:
     @brief Message sent after the sign in process has completed to report the signed in user or
@@ -96,7 +96,7 @@ typedef void (^FUIAuthResultCallback)(FIRUser *_Nullable user, NSError *_Nullabl
  */
 - (void)authUI:(FUIAuth *)authUI
     didSignInWith:(nullable FIRAuthDataResult *)authDataResult
-            error:(nullable NSError *)error;
+            error:(nullable NSError *)error NS_SWIFT_NAME(authUI(_:didSignInWith:error:));
 
 /** @fn authUI:didSignInWithUser:error:
     @brief This is deprecated API and will be removed in a future release.
